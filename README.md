@@ -1,5 +1,4 @@
 # Установка
----
 1. Скачать архив [libgmp](https://gmplib.org/)
 2. В распакованной папке ввести:
   - sudo apt-get install m4
