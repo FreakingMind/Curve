@@ -1,3 +1,14 @@
+# Установка
+1. Скачать архив [libgmp](https://gmplib.org/)
+2. В распакованной папке ввести
+- sudo apt-get install m4
+- ./configure 
+- make 
+- make check 
+- sudo make install  
+
+
+
 # Curve
 1. В рамках данной задачи с помощью библиотеки __libgmp__ была:
 - Выбрана точка P на кривой в форме __Гессе__.
