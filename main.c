@@ -40,7 +40,7 @@ void Test(){
     if (CheckPoint(ladder(k,My_point)) == 0){
         printf("Да, точка на прямой\n");
     }
-    else{
+    else {
         printf("Нет, точка не на прямой\n");
     }
     mpz_clear(u1);
@@ -55,9 +55,6 @@ void Test(){
     mpz_init_set_si(qx, 1);
     mpz_init_set_si(qy, -1);
     mpz_init_set_si(qz, 0);
-    mpz_init(qu.x_cor);
-    mpz_init(qu.y_cor);
-    mpz_init(qu.z_cor);
     point_initialization(&qu,qx,qy,qz);
     mpz_t increased_q;
     mpz_init_set_str(increased_q,q_pr,10);
@@ -88,9 +85,6 @@ void Test(){
     mpz_sub(decreased_q,decreased_q,qx);
 
     struct Point reversed;
-    mpz_init(reversed.x_cor);
-    mpz_init(reversed.y_cor);
-    mpz_init(reversed.z_cor);
     point_initialization(&reversed,My_point.y_cor,My_point.x_cor,My_point.z_cor); //обратный элемент
 
     struct Point LeftCheck;
@@ -132,9 +126,6 @@ void Test(){
     printf("%s\n", "Второе равенство:");
 
     struct Point RightCheck;
-    mpz_init(RightCheck.x_cor);
-    mpz_init(RightCheck.y_cor);
-    mpz_init(RightCheck.z_cor);
     RightCheck = ladder(decreased_q,My_point); // [q-1]P
 
     mpz_mul(a,reversed.x_cor,RightCheck.y_cor);
