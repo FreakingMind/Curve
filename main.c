@@ -50,12 +50,8 @@ void Test(){
 
     //Второй тест
     printf("Тест 2. Координаты полученной точки q[P]?\n");
-    struct Point qu;
-    mpz_t qx, qy, qz;
+    mpz_t qx;
     mpz_init_set_si(qx, 1);
-    mpz_init_set_si(qy, -1);
-    mpz_init_set_si(qz, 0);
-    point_initialization(&qu,qx,qy,qz);
     mpz_t increased_q;
     mpz_init_set_str(increased_q,q_pr,10);
     struct Point P;
@@ -66,12 +62,6 @@ void Test(){
     gmp_printf("x=%Zd\n",P.x_cor);
     gmp_printf("y=%Zd\n",P.y_cor);
     gmp_printf("z=%Zd\n",P.z_cor);
-
-    mpz_clear(qu.x_cor);
-    mpz_clear(qu.y_cor);
-    mpz_clear(qu.z_cor);
-    mpz_clear(qy);
-    mpz_clear(qz);
     mpz_clear(P.x_cor);
     mpz_clear(P.y_cor);
     mpz_clear(P.z_cor);
